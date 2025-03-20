@@ -27,27 +27,21 @@ async function fetchkupotKlali() {
       let colllen;
       let coll = [];
       for (let i = 0; i < rows.length; i++) {
-        const row = rows[i];
-        const mozar = row.getElementsByTagName("SUG_KRN")[0]?.textContent ||  '';
-        const shemkupa = row.getElementsByTagName("SHM_KRN")[0]?.textContent || '';
-        const yitratnehasim = row.getElementsByTagName("YITRAT_NCHASIM_LSOF_TKUFA")[0]?.textContent || '';
-        const divuach = row.getElementsByTagName("MATZAV_DIVUACH")[0]?.textContent ||  '';
-        const mhkupa = row.getElementsByTagName("ID")[0]?.textContent ||  '';
-        const tesuam = row.getElementsByTagName("TSUA_MITZTABERET_LETKUFA")[0]?.textContent ||  '';
-        const tesuam36 = row.getElementsByTagName("TSUA_MITZTABERET_36_HODASHIM")[0]?.textContent ||  '';
-        const tesuam60 = row.getElementsByTagName("TSUA_MITZTABERET_60_HODASHIM")[0]?.textContent ||  '';
-        const tarsiyum = row.getElementsByTagName("TAARICH_SIUM_PEILUT")[0]?.textContent ||  '';
-        const menahelet = row.getElementsByTagName("SHM_HEVRA_MENAHELET")[0]?.textContent ||  '';
-        const stiya36 = row.getElementsByTagName("STIAT_TEKEN_36_HODASHIM")[0]?.textContent ||  '';  
-        const stiya60 = row.getElementsByTagName("STIAT_TEKEN_60_HODASHIM")[0]?.textContent ||  '';
-        const aktoari = row.getElementsByTagName("ODEF_GIRAON_ACTUARI_LETKUFA")[0]?.textContent ||  '';   
-        const hafkadot= row.getElementsByTagName("HAFKADOT_LLO_HAAVAROT")[0]?.textContent ||  0;
-        const meshichot= row.getElementsByTagName("MSHICHOT_LLO_HAAVAROT")[0]?.textContent ||  0;
-        const niyudNeto= row.getElementsByTagName("HAAVAROT_BEIN_HAKRANOT")[0]?.textContent ||  0;
-        const zviraNeto= row.getElementsByTagName("TZVIRA_NETO")[0]?.textContent ||  0;
-        const yitratNechasim= row.getElementsByTagName("YITRAT_NCHASIM_LSOF_TKUFA")[0]?.textContent ||  0;
-        const sharp= row.getElementsByTagName("SHARP_RIBIT_HASRAT_SIKUN")[0]?.textContent ||  0;
-  
+          const row = rows[i];
+          const mozar = row.getElementsByTagName("SUG_KRN")[0]?.textContent ||  '';
+          const shemkupa = row.getElementsByTagName("SHM_KRN")[0]?.textContent || '';
+          const yitratnehasim = row.getElementsByTagName("YITRAT_NCHASIM_LSOF_TKUFA")[0]?.textContent || '';
+          const divuach = row.getElementsByTagName("MATZAV_DIVUACH")[0]?.textContent ||  '';
+          const mhkupa = row.getElementsByTagName("ID")[0]?.textContent ||  '';
+          const tesuam = row.getElementsByTagName("TSUA_MITZTABERET_LETKUFA")[0]?.textContent ||  '';
+          const tesuam36 = row.getElementsByTagName("TSUA_MITZTABERET_36_HODASHIM")[0]?.textContent ||  '';
+          const tesuam60 = row.getElementsByTagName("TSUA_MITZTABERET_60_HODASHIM")[0]?.textContent ||  '';
+          const tarsiyum = row.getElementsByTagName("TAARICH_SIUM_PEILUT")[0]?.textContent ||  '';
+          const menahelet = row.getElementsByTagName("SHM_HEVRA_MENAHELET")[0]?.textContent ||  '';
+          const stiya36 = row.getElementsByTagName("STIAT_TEKEN_36_HODASHIM")[0]?.textContent ||  '';  
+          const stiya60 = row.getElementsByTagName("STIAT_TEKEN_60_HODASHIM")[0]?.textContent ||  '';
+          const aktoari = row.getElementsByTagName("ODEF_GIRAON_ACTUARI_LETKUFA")[0]?.textContent ||  '';   
+
           if (
             divuach === "דווח" &&
             !tarsiyum &&
@@ -64,13 +58,7 @@ async function fetchkupotKlali() {
             menahelet: menahelet,
             stiya36: stiya36,
             stiya60: stiya60,
-            aktoari: aktoari,
-            hafkadot:hafkadot,
-            meshichot:meshichot,
-            niyudNeto:niyudNeto,
-            zviraNeto:zviraNeto,
-            yitratNechasim:yitratNechasim,
-            sharp:sharp    
+            aktoari: aktoari    
           });
 
           
