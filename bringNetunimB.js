@@ -80,21 +80,17 @@ async function fetchkupotKlali() {
       let colllen;
       let coll = [];
       for (let i = 0; i < rows.length; i++) {
-        const row = rows[i];
-        const mozar = 'פוליסות חסכון';
-        const shemkupa = row.getElementsByTagName("SHEM_GUF")[0]?.textContent || '';
-        const yitratnehasim = row.getElementsByTagName("YIT_NCHASIM_BFOAL")[0]?.textContent || '';
-        const mhkupa = row.getElementsByTagName("ID_GUF")[0]?.textContent ||  '';
-        const tesuam = row.getElementsByTagName("TSUA_MITZ_LE_TKUFA")[0]?.textContent ||  0;
-        const tesuam36 = row.getElementsByTagName("TSUA_MITZTABERET_36_HODASHIM")[0]?.textContent ||  0;
-        const tesuam60 = row.getElementsByTagName("TSUA_MITZTABERET_60_HODASHIM")[0]?.textContent ||  0;
-        const tarsiyum = row.getElementsByTagName("TAARICH_SIUM_PEILUT")[0]?.textContent ||  '';
-        const stiya36 = row.getElementsByTagName("STIAT_TEKEN_36_HODASHIM")[0]?.textContent ||  '';  
-        const stiya60 = row.getElementsByTagName("STIAT_TEKEN_60_HODASHIM")[0]?.textContent ||  '';  
-        const yitratNechasim= row.getElementsByTagName("YIT_NCHASIM_BFOAL")[0]?.textContent ||  0;
-        const dmeyNihul= row.getElementsByTagName("SHIUR_D_NIHUL_NECHASIM")[0]?.textContent ||  0;
-        const dmeyNihulHafkad= row.getElementsByTagName("SHIUR_D_NIHUL_HAFKADOT")[0]?.textContent ||  0;
-        const sharp= row.getElementsByTagName("SHARP_RIBIT_HASRAT_SIKUN")[0]?.textContent ||  0;
+          const row = rows[i];
+          const mozar = 'פוליסות חסכון';
+          const shemkupa = row.getElementsByTagName("SHEM_GUF")[0]?.textContent || '';
+          const yitratnehasim = row.getElementsByTagName("YIT_NCHASIM_BFOAL")[0]?.textContent || '';
+          const mhkupa = row.getElementsByTagName("ID_GUF")[0]?.textContent ||  '';
+          const tesuam = row.getElementsByTagName("TSUA_MITZ_LE_TKUFA")[0]?.textContent ||  '';
+          const tesuam36 = row.getElementsByTagName("TSUA_MITZTABERET_36_HODASHIM")[0]?.textContent ||  '';
+          const tesuam60 = row.getElementsByTagName("TSUA_MITZTABERET_60_HODASHIM")[0]?.textContent ||  '';
+          const tarsiyum = row.getElementsByTagName("TAARICH_SIUM_PEILUT")[0]?.textContent ||  '';
+          const stiya36 = row.getElementsByTagName("STIAT_TEKEN_36_HODASHIM")[0]?.textContent ||  '';  
+          const stiya60 = row.getElementsByTagName("STIAT_TEKEN_60_HODASHIM")[0]?.textContent ||  '';  
 
           if (
             !excludedKupaNames.some(name => shemkupa.includes(name)) &&
@@ -110,11 +106,7 @@ async function fetchkupotKlali() {
             tesuam36: Number(tesuam36), 
             tesuam60: Number(tesuam60),
             stiya36: stiya36,
-            stiya60: stiya60,
-            yitratNechasim:yitratNechasim,
-            dmeyNihul:dmeyNihul,
-            dmeyNihulHafkad:dmeyNihulHafkad,
-            sharp:sharp    
+            stiya60: stiya60    
           });
 
           
