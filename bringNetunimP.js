@@ -41,6 +41,7 @@ async function fetchkupotKlali() {
           const stiya36 = row.getElementsByTagName("STIAT_TEKEN_36_HODASHIM")[0]?.textContent ||  '';  
           const stiya60 = row.getElementsByTagName("STIAT_TEKEN_60_HODASHIM")[0]?.textContent ||  '';
           const aktoari = row.getElementsByTagName("ODEF_GIRAON_ACTUARI_LETKUFA")[0]?.textContent ||  '';   
+          const sharp= row.getElementsByTagName("SHARP_RIBIT_HASRAT_SIKUN")[0]?.textContent ||  0;
 
           if (
             divuach === "דווח" &&
@@ -58,7 +59,8 @@ async function fetchkupotKlali() {
             menahelet: menahelet,
             stiya36: stiya36,
             stiya60: stiya60,
-            aktoari: aktoari    
+            aktoari: aktoari,
+            sharp: sharp
           });
 
           
