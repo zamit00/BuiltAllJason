@@ -91,6 +91,7 @@ async function fetchkupotKlali() {
           const tarsiyum = row.getElementsByTagName("TAARICH_SIUM_PEILUT")[0]?.textContent ||  '';
           const stiya36 = row.getElementsByTagName("STIAT_TEKEN_36_HODASHIM")[0]?.textContent ||  '';  
           const stiya60 = row.getElementsByTagName("STIAT_TEKEN_60_HODASHIM")[0]?.textContent ||  '';  
+          const sharp= row.getElementsByTagName("SHARP_RIBIT_HASRAT_SIKUN")[0]?.textContent ||  0;
 
           if (
             !excludedKupaNames.some(name => shemkupa.includes(name)) &&
@@ -106,7 +107,8 @@ async function fetchkupotKlali() {
             tesuam36: Number(tesuam36), 
             tesuam60: Number(tesuam60),
             stiya36: stiya36,
-            stiya60: stiya60    
+            stiya60: stiya60,
+            sharp: sharp
           });
 
           
